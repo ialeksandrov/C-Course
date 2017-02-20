@@ -129,13 +129,6 @@ int main(void) {
 	syslog(LOG_NOTICE, "Daemonizing...");
 	daemonize();
 
-	/*while(1){
-		do_something();
-		sleep(10);
-	}
-	
-	closelog();
-	*/
 	if ((listen_fd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
 		perror("socket()");
 		exit(1);
